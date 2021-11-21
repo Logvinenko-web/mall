@@ -20,8 +20,6 @@ npm run build
 
 ### Live preview
 
-See [Vuetify Landing Page Template](https://landingpagecalangoweb.web.app/).
+See [Vuetify Landing Page Template](https://relaxed-archimedes-e5f2db.netlify.app/).
 
-### Customize configuration
 
-See [Configuration Reference](https://cli.vuejs.org/config/).
