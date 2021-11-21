@@ -161,7 +161,7 @@ export default {
     model: 0,
   }),
   async created () {
-    await this.features()
+    await this.cards()
   },
   computed: {
     cards () {
