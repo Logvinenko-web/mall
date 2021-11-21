@@ -24,7 +24,7 @@
                 @click="$vuetify.goTo('#contact')"
                 class="mt-5"
               >
-                Замовити
+                Замовити одяг
                 <v-icon class="ml-2">mdi-arrow-down</v-icon>
               </v-btn>
             </v-col>
