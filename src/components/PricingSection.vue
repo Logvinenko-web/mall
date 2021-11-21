@@ -159,7 +159,13 @@ section {
 export default {
   data: () => ({
     model: 0,
-    cards: [
+  }),
+  async created () {
+    await this.features()
+  },
+  computed: {
+    cards () {
+      return [
       {
         id: 1,
         imgs: [
@@ -240,9 +246,9 @@ export default {
           "Прошиті Мішки 18/19 кг .Товар бомба 💣 Моделі 2020/2021 року",
         ],
       },
-    ],
-  }),
-  computed: {
+    ]
+    },
+
     width() {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":

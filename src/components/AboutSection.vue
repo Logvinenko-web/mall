@@ -1,4 +1,5 @@
 <template>
+<div>
   <section id="about">
     <v-container fluid>
       <v-row align="center" justify="center">
@@ -58,6 +59,7 @@
       </v-row>
     </v-container>
   </section>
+  </div>
 </template>
 
 <style scoped>

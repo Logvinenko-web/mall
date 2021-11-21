@@ -1,4 +1,5 @@
 <template>
+<div>
   <section id="hero">
     <v-parallax
       dark
@@ -69,6 +70,7 @@
       </v-row>
     </v-container>
   </section>
+  </div>
 </template>
 
 <script>
@@ -76,7 +78,14 @@ export default {
   data() {
     return {
       dialog: false,
-      features: [
+    };
+  },
+   async created () {
+    await this.features()
+  },
+  computed: {
+    features () {
+      return [
         {
           img: require("@/assets/img/icon2.png"),
           title: "H & M Hennes & Mauritz AB",
@@ -106,11 +115,10 @@ export default {
           img: require("@/assets/img/icon6.png"),
           title: "",
           text: "Zara є однією з найбільших світових компаній у сфері виробництва модного одягу. Вона входить до групи Inditex, однієї з найбільших світових дистриб'юторських груп.",
-        },
-      ],
-    };
-  },
-  
+        }
+      ]
+    }
+  }
 };
 </script>
 
