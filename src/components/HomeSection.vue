@@ -21,10 +21,10 @@
                 outlined
                 large
                 dark
-                @click="$vuetify.goTo('#pricing')"
+                @click="$vuetify.goTo('#contact')"
                 class="mt-5"
               >
-                До ціни
+                Замовити
                 <v-icon class="ml-2">mdi-arrow-down</v-icon>
               </v-btn>
             </v-col>
