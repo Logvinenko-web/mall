@@ -1,6 +1,6 @@
 <template>
   <section id="pricing" class="pb-8">
-    <v-container fluid d-flex flex-row >
+    <v-container fluid d-flex flex-row>
       <v-row align="center" justify="space-around">
         <v-col cols="15">
           <v-card style="width: 100%">
@@ -17,7 +17,7 @@
                   <v-carousel-item
                     v-for="(item, i) in item.imgs"
                     :key="i"
-                     :src="item.src"
+                    :src="item.src"
                   ></v-carousel-item>
                 </v-carousel>
 
@@ -28,15 +28,10 @@
                 <v-expand-transition>
                   <div>
                     <v-divider></v-divider>
-                    <v-card-text v-for="des in item.description" :key="des">
+                    <v-card-text v-for="des in item.description" :key="des" class="priceText">
                       {{ des }}
                     </v-card-text>
                   </div>
-                  <!-- <v-divider
-                      style="margin-right: -23px"
-                      vertical
-                      v-if="this.$vuetify.breakpoint.smAndUp"
-                    ></v-divider> -->
                 </v-expand-transition>
               </v-card>
             </div>
@@ -100,6 +95,9 @@ ul {
 </style>
 
 <style scoped>
+.priceText {
+  padding: 5px 10px 5px 20px;
+}
 .header {
   background-color: #283e79;
   color: white;
@@ -164,24 +162,25 @@ export default {
     cards: [
       {
         id: 1,
-        imgs: [{
-          src: require("../assets/img/cool_club/1.jpg"),
-        },
-        {
-          src: require("../assets/img/cool_club/2.jpg"),
-        },
-        {
-          src: require("../assets/img/cool_club/3.jpg"),
-        },
-        {
-          src: require("../assets/img/cool_club/4.jpg"),
-        },
-        {
-          src: require("../assets/img/cool_club/5.jpg"),
-        },
-        {
-          src: require("../assets/img/cool_club/6.jpg"),
-        },
+        imgs: [
+          {
+            src: require("../assets/img/cool_club/1.jpg"),
+          },
+          {
+            src: require("../assets/img/cool_club/2.jpg"),
+          },
+          {
+            src: require("../assets/img/cool_club/3.jpg"),
+          },
+          {
+            src: require("../assets/img/cool_club/4.jpg"),
+          },
+          {
+            src: require("../assets/img/cool_club/5.jpg"),
+          },
+          {
+            src: require("../assets/img/cool_club/6.jpg"),
+          },
         ],
         title: "Cool Club kids сезон Осінь Зима",
         price: "Ціна 19.9 € - 20.5 €",
@@ -196,17 +195,16 @@ export default {
       },
       {
         id: 2,
-        imgs: [{
-          src: require("../assets/img/old_navy/1.jpg"),
-        },
-        {
-          src: require("../assets/img/old_navy/2.jpg"),
-        },
-        {
-          src: require("../assets/img/old_navy/3.jpg"),
-        },
-       
-
+        imgs: [
+          {
+            src: require("../assets/img/old_navy/1.jpg"),
+          },
+          {
+            src: require("../assets/img/old_navy/2.jpg"),
+          },
+          {
+            src: require("../assets/img/old_navy/3.jpg"),
+          },
         ],
         title: "Old Navy kids Америка сезон Осінь Зима",
         price: "Ціна 19 € - 20.5 €",
@@ -220,17 +218,16 @@ export default {
       },
       {
         id: 3,
-        imgs: [{
-          src: require("../assets/img/primark_kids/1.jpg"),
-        },
-        {
-          src: require("../assets/img/primark_kids/2.jpg"),
-        },
-        {
-          src: require("../assets/img/primark_kids/3.jpg"),
-        },
-        
-
+        imgs: [
+          {
+            src: require("../assets/img/primark_kids/1.jpg"),
+          },
+          {
+            src: require("../assets/img/primark_kids/2.jpg"),
+          },
+          {
+            src: require("../assets/img/primark_kids/3.jpg"),
+          },
         ],
         title: "Primark kids Іспанія сезон Осінь Зима",
         price: "Ціна 19 € - 20.5 €",

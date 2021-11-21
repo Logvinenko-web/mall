@@ -57,21 +57,6 @@
     <div class="svg-border-waves text-white">
       <v-img src="~@/assets/img/borderWavesBlue.svg" />
     </div>
-    <v-snackbar
-      v-model="snackbar.enabled"
-      timeout="3000"
-      right
-      top
-      :color="snackbar.color"
-    >
-      {{ snackbar.text }}
-
-      <template v-slot:action="{ attrs }">
-        <v-btn text v-bind="attrs" @click="snackbar.enabled = false">
-          Fechar
-        </v-btn>
-      </template>
-    </v-snackbar>
   </section>
 </template>
 
@@ -101,7 +86,7 @@ export default {
     message: "",
     nameRules: [
       // (v) => !!v || "Заповніть будь ласка поле",
-    //  (v) => (v && v.length >= 3) || "Ім'я має містити мінімум 3 букви",
+      //  (v) => (v && v.length >= 3) || "Ім'я має містити мінімум 3 букви",
     ],
     phoneRules: [
       // (v) => !!v || "Заповніть будь ласка поле",
