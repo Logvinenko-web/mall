@@ -3,9 +3,9 @@
     <navigation :color="color" :flat="flat" />
     <v-main class="pt-0">
       <home />
-     
+
       <about />
-           <pricing />      
+      <pricing />
       <contact />
     </v-main>
     <v-scale-transition>
@@ -27,7 +27,18 @@
   </v-app>
 </template>
 
-<style scoped>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size:16px;
+  line-height:1.7;
+  color:#777;
+}
 .v-main {
   background-image: url("~@/assets/img/bgMain.png");
   background-attachment: fixed;
@@ -38,10 +49,9 @@
 
 <script>
 import navigation from "./components/Navigation";
-import foote from "./components/Footer";
+import footer from "./components/Footer";
 import home from "./components/HomeSection";
 import about from "./components/AboutSection";
-// import download from "./components/DownloadSection";
 import pricing from "./components/PricingSection";
 import contact from "./components/ContactSection";
 
@@ -50,10 +60,9 @@ export default {
 
   components: {
     navigation,
-    foote,
+    footer,
     home,
-     about,
-    // download,
+    about,
     pricing,
     contact,
   },

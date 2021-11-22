@@ -3,17 +3,17 @@
   <section id="hero">
     <v-parallax
       dark
-      src="@/assets/img/bgHero.jpg"
-      height="750"
+      src=""
+      class="header"
     >
       <v-row align="center" justify="center">
         <v-col cols="10">
           <v-row align="center" justify="center">
-            <v-col cols="12" md="6" xl="8">
-              <h1 class="display-2 font-weight-bold mb-4">
+            <v-col cols="12" md="7" xl="8">
+              <h1 class="display-2 font-weight-bold mb-4 heading-primary">
                 Інтернет-магазин "MALL"
               </h1>
-              <h1 class="font-weight-light">
+              <h1 class="font-weight-light heading-primary-sub">
                 Дитячий та дорослий одяг СТОК з Європи <br />
                 різних вікових категорій від найменших і до дорослих! <br />
               </h1>
@@ -127,6 +127,30 @@ export default {
 <style>
 #hero {
   z-index: 0;
+}
+.header{
+  background-image: linear-gradient(
+   to right bottom,
+   #97fae918,
+   #65a2b44d
+   ),
+   url("../assets/img/bgHero.jpg");
+  background-size: cover;
+  background-position: top;
+  height:95vh !important;
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  margin: 0px 20px 30px 20px;
+}
+.heading-primary{
+  display: block;
+  font-size: 6rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 3.5rem !important;
+}
+.heading-primary-sub{
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
 }
 .card {
   min-height: 300px;
