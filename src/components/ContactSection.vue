@@ -54,6 +54,9 @@
         </v-col>
       </v-row>
     </v-container>
+    <v-snackbar v-model="snackbar" :timeout="timeout" color="green">
+      {{ text }}
+    </v-snackbar>
     <div class="svg-border-waves text-white">
       <v-img src="~@/assets/img/borderWavesBlue.svg" />
     </div>
@@ -73,6 +76,12 @@
   width: 100%;
   overflow: hidden;
 }
+.alert-email {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 </style>
 
 <script>
@@ -81,6 +90,10 @@ export default {
   data: () => ({
     icons: ["fa-facebook", "fa-twitter", "fa-linkedin", "fa-instagram"],
     valid: true,
+    alert: false,
+    snackbar: false,
+    text: "Дякуємо за звернення :)",
+    timeout: 3000,
     name: "",
     phone: "",
     message: "",
@@ -94,11 +107,7 @@ export default {
     ],
 
     lazy: false,
-    snackbar: {
-      enabled: false,
-      text: "",
-      color: "",
-    },
+  
   }),
   methods: {
     sendEmail() {
@@ -114,9 +123,7 @@ export default {
           "user_cqdNawJTZjmaHUZXqZ0bI"
         )
         .then(
-          (result) => {
-            
-          },
+          (result) => {},
           (error) => {
             console.log("FAILED...", error.text);
           }
@@ -124,7 +131,9 @@ export default {
       this.name = "";
       this.phone = "";
       this.message = "";
+      this.snackbar = true;
     },
+   
   },
 };
 </script>
