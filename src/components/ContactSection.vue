@@ -90,7 +90,7 @@ export default {
     ],
     phoneRules: [
       // (v) => !!v || "Заповніть будь ласка поле",
-       (v) => (v.match(/^(\+)?(\(\d{2,3}\) ?\d|\d)(([ \-]?\d)|( ?\(\d{2,3}\) ?)){8,12}\d$/)) || "Не корректний номер телефону",
+      //  (v) => (v.match(/^(\+)?(\(\d{2,3}\) ?\d|\d)(([ \-]?\d)|( ?\(\d{2,3}\) ?)){8,12}\d$/)) || "Не корректний номер телефону",
     ],
 
     lazy: false,
@@ -102,25 +102,25 @@ export default {
   }),
   methods: {
     sendEmail() {
-      // emailjs
-      //   .send(
-      //     "service_q6jsjrc",
-      //     "template_6g8qtij",
-      //     {
-      //       name: this.name,
-      //       phone: this.phone,
-      //       message: this.message,
-      //     },
-      //     "user_IKxzK3Kz484EyCU7HWC8V"
-      //   )
-      //   .then(
-      //     (result) => {
-      //       console.log("SUCCESS!", this.$refs.form);
-      //     },
-      //     (error) => {
-      //       console.log("FAILED...", error.text);
-      //     }
-      //   );
+      emailjs
+        .send(
+          "service_ygxcmmg",
+          "template_5lbjkda",
+          {
+            name: this.name,
+            phone: this.phone,
+            message: this.message,
+          },
+          "user_cqdNawJTZjmaHUZXqZ0bI"
+        )
+        .then(
+          (result) => {
+            
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+          }
+        );
       this.name = "";
       this.phone = "";
       this.message = "";
