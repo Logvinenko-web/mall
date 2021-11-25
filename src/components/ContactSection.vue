@@ -76,19 +76,13 @@
   width: 100%;
   overflow: hidden;
 }
-.alert-email {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 </style>
 
 <script>
 import emailjs from "emailjs-com";
 export default {
   data: () => ({
-    icons: ["fa-facebook", "fa-twitter", "fa-linkedin", "fa-instagram"],
+    icons: ["fa-facebook", "fa-instagram"],
     valid: true,
     alert: false,
     snackbar: false,

@@ -18,6 +18,7 @@
                     v-for="(item, i) in item.imgs"
                     :key="i"
                     :src="item.src"
+                    rel="preload"
                   ></v-carousel-item>
                 </v-carousel>
 
